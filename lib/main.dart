@@ -6,11 +6,9 @@ import 'package:flutter/material.dart';
 
 void main() async {
   //Initialize hive
-
   await Hive.initFlutter();
 
   //Open a hive box
-  
   await Hive.openBox('note_database');
 
   runApp(const MyApp());

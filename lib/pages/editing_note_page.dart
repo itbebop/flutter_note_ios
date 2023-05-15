@@ -98,8 +98,10 @@ class _EditingNotePageState extends State<EditingNotePage> {
     //Add the new note
     Provider.of<NoteData>(context, listen: false)
         .addNewNote(Note(id: id, text: text));
-  }
+    Provider.of<NoteData>(context, listen: false)
+        .addNewNoteToDb(Note(id: id, text: text));
 
+  }
   void updateNote() {
     //get text from editor
     String text = _controller.document.toPlainText();
