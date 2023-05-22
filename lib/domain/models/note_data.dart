@@ -1,7 +1,8 @@
 import 'package:applenotes/data/hive_database.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import '../env.dart';
+import 'package:logger/logger.dart';
+import 'package:applenotes/env.dart';
 import 'note.dart';
 
 class NoteData extends ChangeNotifier {
@@ -28,15 +29,18 @@ class NoteData extends ChangeNotifier {
     db.savedNotes(allNotes);
     notifyListeners();
   }
-// Add a new Note to DB
+  var logger = Logger();
+// Add a new Note to DBUpgrade plan
   Future addNewNoteToDb(Note note) async {
     var formData = FormData.fromMap(
       {
         "id": note.id,
-        "text": note.text,
+        "content": note.text,
         "createdAt": DateTime.now().toString()
       }
     );
+    logger.d(note.id);
+    logger.d(note.text);
     return await dio.post("${Env.URL_PREFIX}/create.php", data: formData);
   }
 // Update a Note

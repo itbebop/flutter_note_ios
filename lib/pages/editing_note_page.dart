@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_quill/flutter_quill.dart' hide Text;
 import 'package:provider/provider.dart';
-import '../models/note.dart';
-import '../models/note_data.dart';
+import '../domain/models/note.dart';
+import '../domain/models/note_data.dart';
 
 class EditingNotePage extends StatefulWidget {
   Note note;
@@ -92,7 +92,7 @@ class _EditingNotePageState extends State<EditingNotePage> {
 
   void addNewNote() {
     //Get new ID
-    int id = Provider.of<NoteData>(context, listen: false).getAllNotes().length;
+    int id = Provider.of<NoteData>(context, listen: false).getAllNotes().length+1;
     //get text from editor
     String text = _controller.document.toPlainText();
     //Add the new note

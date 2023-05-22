@@ -1,4 +1,4 @@
-import 'package:applenotes/models/note_data.dart';
+import 'package:applenotes/domain/models/note_data.dart';
 import 'package:applenotes/pages/home_page.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:provider/provider.dart';

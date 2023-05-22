@@ -1,6 +1,6 @@
 import 'package:applenotes/pages/editing_note_page.dart';
-import 'package:applenotes/models/note_data.dart';
-import 'package:applenotes/models/note.dart';
+import 'package:applenotes/domain/models/note_data.dart';
+import 'package:applenotes/domain/models/note.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

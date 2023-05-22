@@ -2,8 +2,8 @@
 
 $db_name = "mydb";
 $db_server = "mariadb";
-$db_user = "myuser";
-$db_pass = "mypath12345";
+$db_user = "mypath12345";
+$db_pass = "myroot12345";
 
 // PDO 이용한 구현
 // $db = new PDO("mysql:host={$db_server};dbname={$db_name};charset=utf8", $db_user, $db_pass);

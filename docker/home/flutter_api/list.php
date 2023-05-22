@@ -9,7 +9,7 @@ include "../flutter_api/db.php";
 // echo json_encode($result);
 
 // mysqli 이용한 구현
-$stmt = "SELECT id, name, age, createdAt FROM student";
+$stmt = "SELECT id, content, createdAt FROM note";
 
 # 쿼리 실행
 $result = mysqli_query($db, $stmt);

@@ -1,7 +1,7 @@
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
-import '../models/note.dart';
+import '../domain/models/note.dart';
 
 class HiveDatabase {
   //Reference our hive box
